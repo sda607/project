@@ -62,7 +62,7 @@ public class SecurityConfig {
 
                 .mvcMatchers("/css/**", "/js/**", "/img/**").permitAll()
 
-                .mvcMatchers("/", "/members/**", "/item/**", "/images/**").permitAll()
+                .mvcMatchers("/", "/members/**", "/item/**", "/images/**", "/thymeleaf/**").permitAll()
 
                 .mvcMatchers("/admin/**").hasRole("ADMIN")
 
@@ -70,7 +70,6 @@ public class SecurityConfig {
 
         ;
 
-​
 
         http.exceptionHandling()
 
@@ -78,13 +77,11 @@ public class SecurityConfig {
 
         ;
 
-​
 
         return http.build();
 
     }
 
-​
 
     @Bean
 
@@ -94,6 +91,5 @@ public class SecurityConfig {
 
     }
 
-​
 
 }
